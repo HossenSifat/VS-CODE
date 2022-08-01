@@ -423,6 +423,27 @@ print(square_nums)
 even_numbers = list(filter(lambda n: n%2 == 0, number))
 print(even_numbers)
 
+#swap two variable
+a = 5
+b = 6
+
+# temp = a
+# a= b
+# b = temp
+
+# a = a + b #11
+# b = a-b # 5
+# a = a - b #6
+
+# a = a ^ b # XOR method
+# b = a ^ b
+# a = a ^ b
+
+a,b = b,a #right side assign first
+
+print(a)
+print(b)
+
 
 
 
