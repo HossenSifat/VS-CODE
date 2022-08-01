@@ -324,6 +324,8 @@ print(float(first_num)+ float(second_num))
 #dates
 import datetime
 import math
+from tracemalloc import start
+import turtle
 current_date = datetime.datetime.now()
 print('today is: ' + str(current_date))
 #one_day = datetime(days=1)
@@ -444,8 +446,69 @@ a,b = b,a #right side assign first
 print(a)
 print(b)
 
+#converting celsius to fahrenheit
+
+celsius = 22
+fahrenheit = (celsius * 1.8) +32
+print(fahrenheit)
+print('%.2f celsius = %.2f fahrenheit' %(celsius, fahrenheit))
+
+#prime number
+num = 7
+
+for i in range(2,num):
+    if num % i == 0:
+        print('Not prime number')
+        break
+else:
+    print('prime number')
+
+#even number
+def is_even(number):
+    if number % 2 == 0:
+        return True
+    else:
+        return False
+even_numbers = []
+
+starting = 0
+# while starting < 100:
+#     if is_even(starting):
+#         print(f'{starting} is Even')
+#     else:
+#         print(f"{starting} is Odd")
+#     starting = starting + 1
+# while starting < 100:
+#     if is_even(starting):
+#         even_numbers.append(starting)
+#     starting = starting + 1
+
+for value in range(0, 50):
+    if is_even(value):
+        even_numbers.append(value)
+
+#print(even_numbers)
+print(f"Even number:{even_numbers}")
+print("Finished")
 
 
+with open("pytext.txt", mode="r") as r_qoute:
+    words_all = []
+    for line in r_qoute.readlines():
+        words = line.strip().split(" ")
+        words_all += words
+    unique_words = set(words_all)
+    print(words_all)
+    print(len(unique_words))
+
+    with open("unique_words.txt", mode = "w") as u_word:
+        for item in sorted(unique_words):
+            u_word.write(item)
+            u_word.write("\n")
+
+
+
+print("finished")
 
 
 
