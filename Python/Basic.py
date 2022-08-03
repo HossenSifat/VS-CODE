@@ -454,6 +454,7 @@ print(fahrenheit)
 print('%.2f celsius = %.2f fahrenheit' %(celsius, fahrenheit))
 
 #prime number
+
 num = 7
 
 for i in range(2,num):
@@ -462,6 +463,25 @@ for i in range(2,num):
         break
 else:
     print('prime number')
+
+import math
+
+# user_num = int(input("upper limit for prime: "))
+user_num = 20
+
+def is_prime(num):
+    for i in range(2, int(math.sqrt(num)+1)):
+        if num % i == 0:
+            return False
+    return True
+
+prime_list =[]
+
+for i in range(1, user_num + 1):
+    if is_prime(i):
+        prime_list.append(i)
+        print(i)
+print(f"prime_list: {prime_list} ")        
 
 #even number
 def is_even(number):
@@ -510,6 +530,59 @@ with open("pytext.txt", mode="r") as r_qoute:
 
 print("finished")
 
+#oop
+
+class person:
+    def __init__(self, person_name, person_age, person_height):
+        self.name = person_name
+        self.age = person_age
+        self.height = person_height
+        
+    def get_person_name(self):
+        return self.name
+
+    def get_summary(self):
+        return f"Name: {self.name}, Age: {self.age}, Height: {self.height}"
+    
+    def set_name(self, new_name):
+        if (self.__has_any_number(new_name)):
+            print("Sorry perosn name can't have number")
+            return
+        self.name = new_name
+    
+    def __has_any_number(self, string):
+        return "0" in string
+
+# person_list = []
+# person_list.append(person("zulkarnine", 30, 6.2))
+# person_list.append(person("zuman", 40, 6.0))
+# person_list.append(person("karim", 14, 5.2))
+# person_list.append(person("jamal", 19, 5.8))
+# person_list.append(person("kali", 21, 5.4))
+# person_list.append(person("durjo", 29, 6.3))
+
+# for person in person_list:
+#     if person.age >= 20:
+#         print(person.get_summary())
+
+sifat=person("Sifat", "23", "5.8")
+shuvo = person("shuvo", "24", "5.6")
+
+sifat.set_name("0Mofrat")
+print(shuvo.height)
+print(sifat.get_summary())
+print(sifat.get_person_name())
 
 
+class Student(person):
+    def __init__(self, person_name, person_age, person_height, student_id, student_email):
+        super().__init__(person_name, person_age, person_height)
+        self.id = student_id
+        self.email = student_email
 
+    def get_summary(self):
+        return f"Name: {self.get_person_name()} Email: {self.email} Age: {self.age}"
+
+student1 = Student("A",20, 6.2,"ka@gmail.com", "234EEE" )
+student1.set_name("mofrat")
+print(student1.get_summary())       
