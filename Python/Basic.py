@@ -603,7 +603,7 @@ class DoubleLinkedList:
         self.tail = None
         self.size = 0
     
-    def add(self, value):
+    def add(self, val):
         node = Node(val)
         if self.tail is None:
             self.head = node
