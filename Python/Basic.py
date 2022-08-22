@@ -294,11 +294,11 @@ print('This car\'s color is ' + str(car3.color) + ' and brand name is ' + car3.b
 # import name
 # print(name.my_name)
 
-# sentence = 'my dog name is sammy'
-# print(sentence.upper())
-# print(sentence.lower())
-# print(sentence.capitalize())
-# print(sentence.count('m'))
+sentence = 'my dog name is sammy'
+print(sentence.upper())
+print(sentence.lower())
+print(sentence.capitalize())
+print(sentence.count('m'))
 
 #string code
 first_name= 'sifat'
