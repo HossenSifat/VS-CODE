@@ -99,3 +99,34 @@ while i<len(data):
     i = i + 1
 print('Crazy',data[-3])
 
+L_list = ['ai', 3, 'studymart', 7, 8, 'Ml']
+print(L_list.pop())
+print(L_list.append(3))
+print(L_list)
+print(L_list.pop(1))
+print(L_list)
+#comprehension list
+list1 = [x for x in range(10)]
+print(list1)
+list1 = [ x for x in range(10) if x % 2 == 0]
+print(list1)
+print(10 in list1)
+
+tu1 = ('run', 4 , 's')
+tu2 = ('sif',)
+print(type(tu1))
+T_list = list(tu1)
+print(type(T_list))
+T_list.append('add')
+print(T_list)
+tu1 = tuple(T_list)
+print(type(tu1))
+print(tu1 + tu2 )
+set1 = {(1, 5,7), 5, 'ai', True}
+print(set1)
+set1.add(100)
+print(set1)
+set1.update([10, 20, 50, 100 ,20])#update is used for multiple add
+print(set1)
+set1.remove(20)
+print(set1)
