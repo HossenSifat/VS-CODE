@@ -128,5 +128,18 @@ set1.add(100)
 print(set1)
 set1.update([10, 20, 50, 100 ,20])#update is used for multiple add
 print(set1)
-set1.remove(20)
+set1.remove(20)#romove function works when the value exist in the set. otherwise it show error
 print(set1)
+print(set1.discard(20))
+set2 = {(1, 5,7), 5, 'ai', True}
+set3 = {(1, 5,7), 8, 12, 5, 'ai', False}
+s1 = frozenset(set2)
+print(type(s1))
+s2 = frozenset(set3)
+print(s1.union(s2))
+print(s1.intersection(s2))
+s3 = frozenset('data science')
+print([ list(x) for x in s3 ] )
+print(s1.difference(s2))
+print(s2.difference(s1))
+
