@@ -1,5 +1,6 @@
 var= 'study mart'
 print(id(var))
+from binhex import openrsrc
 from operator import truediv
 import sys
 print(sys.getsizeof(var)) 
@@ -143,3 +144,73 @@ print([ list(x) for x in s3 ] )
 print(s1.difference(s2))
 print(s2.difference(s1))
 
+import array as ar
+ar1 = ar.array('i', [3, 2, 3, 5])
+print(ar1) #rest of the thing more like list
+ar1[2]= 7
+print(ar1)
+dic = {
+    'Name' : 'Sifat',
+    'Versity' :'PCIU',
+    'Dep.': 'EEE' 
+}
+print(dic)
+
+for x in dic:
+    print(dic[x])
+
+for x in dic:
+    print(x)
+
+L1 = list(dic.keys())
+print(L1)
+
+# n = int(input())
+# dic ={}
+# for i in range(n):
+#     key = input()
+#     value = input()
+#     dic[key] =value
+# print(dic)
+
+#zip
+
+name = ['shakil', 'sayem', 'sohan']
+varsity =['PCIU', 'FAU', 'DIU']
+zipped = zip(name, varsity)
+print(list(zipped))
+dict1 = dict(zip(name, varsity))
+print(dict1)
+print(dict1.keys())
+
+#unzip
+zipped = list(zip(name, varsity))
+print(zipped)
+name1 , varsity1 =zip(*zipped)
+print(name1)
+print(varsity1)
+
+#zip & unzip file
+
+import zipfile as zp
+zipp = zp.ZipFile('Zipped Rename.zip', 'w')
+zipp.write(a)
+zipp.write(ab)
+zipp.write(abc)
+
+with zp.ZipFile('Zipped Rename.zip', 'r') as file:
+    file.extractall('unzp')
+
+#Replace text in a file
+s_word = 'nothing'
+r_word = 'fun'
+
+with open(r'pytext.txt', 'w') as file:
+    data = file.read()
+    data = file.replace(s_word , r_word)
+
+with open(r'pytext.txt', 'w') as file:
+    file.write(data)
+
+import re
+re.sub(s_word, r_word, pytext) 
