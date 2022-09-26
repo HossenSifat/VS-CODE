@@ -192,25 +192,33 @@ print(varsity1)
 
 #zip & unzip file
 
-import zipfile as zp
-zipp = zp.ZipFile('Zipped Rename.zip', 'w')
-zipp.write(a)
-zipp.write(ab)
-zipp.write(abc)
+# import zipfile as zp
+# zipp = zp.ZipFile('Zipped Rename.zip', 'w')
+# zipp.write(a)
+# zipp.write(ab)
+# zipp.write(abc)
 
-with zp.ZipFile('Zipped Rename.zip', 'r') as file:
-    file.extractall('unzp')
+# with zp.ZipFile('Zipped Rename.zip', 'r') as file:
+#     file.extractall('unzp')
 
-#Replace text in a file
-s_word = 'nothing'
-r_word = 'fun'
+# #Replace text in a file
+# s_word = 'nothing'
+# r_word = 'fun'
 
-with open(r'pytext.txt', 'w') as file:
-    data = file.read()
-    data = file.replace(s_word , r_word)
+# with open(r'pytext.txt', 'w') as file:
+#     data = file.read()
+#     data = file.replace(s_word , r_word)
 
-with open(r'pytext.txt', 'w') as file:
-    file.write(data)
+# with open(r'pytext.txt', 'w') as file:
+#     file.write(data)
 
-import re
-re.sub(s_word, r_word, pytext) 
+# import re
+# re.sub(s_word, r_word, pytext) 
+
+import matplotlib.pyplot as plt
+
+year = [1950,1975, 2000, 2025]
+pop = [2.5, 3.6, 4.9, 7]
+
+plt.plot(year, pop)
+print(plt.show())
