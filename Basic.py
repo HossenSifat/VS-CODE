@@ -657,7 +657,8 @@ print(my_list.size)
 my_list.remove(4)
 print(my_list)
 
-
+x = 5
+print(x)
 
 
 
