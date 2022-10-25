@@ -660,5 +660,23 @@ print(my_list)
 x = 5
 print(x)
 
+print('python ' + '3', '2', sep = '.')
+a, b, *c, d = [1, 2, 3,4,5,6,7,8,9,10,11,12]
+print(a)
+print(b)
+print(c)
+print(d)
 
+first = {1,2,3,4,5,6}
+second ={4,5,6,7,8,9}
 
+print(first | second) # union get all item in both
+print(first & second) # intersection get item only in both
+print(first - second) # difference get item in the first set but not in the second
+print(second - first)
+print(first ^ second) #symmetric difference get item in either set, but not both.
+
+cubes = [i**3 for i in range(5)]
+print(cubes)
+evens = [1**2 for i in range(10) if i**2 % 2 ==0]
+print(evens)
