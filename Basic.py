@@ -680,3 +680,12 @@ cubes = [i**3 for i in range(5)]
 print(cubes)
 evens = [1**2 for i in range(10) if i**2 % 2 ==0]
 print(evens)
+
+text = input()
+
+dict = {}
+#your code goes here
+for t in text:
+    dict[t] = text.count(t)
+
+print(dict)
