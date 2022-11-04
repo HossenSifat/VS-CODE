@@ -37,3 +37,18 @@ def apply_twice(func, arg):
 def add_five(x):
     return x + 5 
 print(apply_twice(add_five, 10 ))
+
+#dic
+
+alien = {
+    'color': 'green',
+    'point': 5
+}
+print(alien['color'])
+print(alien.get('color'))
+alien['position']= 'sky'
+print(alien)
+
+for name, value in alien.items():
+    print( name + ' :' + str(value))
+
