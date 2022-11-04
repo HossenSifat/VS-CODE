@@ -681,11 +681,11 @@ print(cubes)
 evens = [1**2 for i in range(10) if i**2 % 2 ==0]
 print(evens)
 
-text = input()
+# text = input()
 
-dict = {}
-#your code goes here
-for t in text:
-    dict[t] = text.count(t)
+# dict = {}
+# #your code goes here
+# for t in text:
+#     dict[t] = text.count(t)
 
-print(dict)
+# print(dict)

@@ -57,3 +57,5 @@ newdf =newdf.drop([1,3], axis =0)
 print(newdf)
 newdf = newdf.reset_index(drop= True)
 print(newdf)
+
+
